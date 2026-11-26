@@ -1,0 +1,34 @@
+Overview plan
+ใน class AirPurifier ควรมีอะไรบ้าง?
+1.Instance Variables = ข้อมูลของเครื่องฟอกอากาศ
+ - Model (string) เก็บชื่อรุ่นเครื่องฟอกอากาศ
+ - serialNo (string) เก็บหมายเลขประจำตัวเครื่อง
+ - power (boolean) สถานะเปิด-ปิด
+ - fanSpeed (int) เก็บความแรงลม
+2.Instance Methods = ความสามารถที่ Object ทำได้
+ - turnOn()	เปิดเครื่อง
+ - turnOff() ปิดเครื่อง
+ - isOn() ตรวจสอบว่าเครื่องเปิดอยู่หรือไม่
+ - getModel() คืนค่ารุ่นเครื่อง
+ - getSerialNo() คืนค่าหมายเลขประจำเครื่อง
+ - displayInfo() แสดงข้อมูลเครื่อง
+ - increaseFanSpeed() เพิ่มความเร็ว
+ - decreaseFanSpeed() ลดความเร็ว
+   ความเร็ว 0% เครื่องจะปิดอัตโนมัติ
+ - getFanSpeed() อ่านค่าความแรงลม
+3.Class Variables
+ - totalPurifiers = จำนวนเครื่องฟอกอากาศที่สร้างทั้งหมด
+ - modelCounts = จำนวนเครื่องฟอกอากาศแยกตามรุ่น
+4.Class Methods
+ - getTotalPurifiers() คืนจำนวนเครื่องทั้งหมด
+ - getCountForModel() คืนจำนวนเครื่องของรุ่นที่ระบุ
+ - getMostPopularModel() คืนรุ่นที่ผลิตมากที่สุด
+ - getAverageCountPerModel() คำนวณจำนวนเครื่องเฉลี่ยต่อรุ่น
+
+Constructor
+เมื่อสร้าง Object ใหม่ จะทำงานดังนี้
+1.รับค่า model และ serialNo
+2.กำหนดค่าให้ Instance Variables
+3.กำหนดค่าเริ่มต้น power เป็น false
+4.เพิ่มจำนวนเครื่องทั้งหมด
+5.เพิ่มจำนวนเครื่องในรุ่นนั้นใน HashMap
